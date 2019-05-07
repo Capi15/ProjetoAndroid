@@ -26,7 +26,7 @@
                 android:layout_width="240dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:padding="2dp"
                 android:src="@drawable/ic_conta" />
@@ -35,12 +35,32 @@
                 android:id="@+id/utilizador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="20dp"
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_conta_branco"
                 android:drawablePadding="12dp"
                 android:ems="10"
                 android:hint="Nome de Utilizador"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_email_branco"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:padding="8dp"
@@ -60,7 +80,27 @@
                 android:drawableLeft="@drawable/ic_palavra_passse_branco"
                 android:drawablePadding="12dp"
                 android:ems="10"
-                android:hint="......."
+                android:hint="Palavra-passe"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/comfirma_palavra_passe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_comfirma_passe_branco"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Comfirme a palavra-passe"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="8dp"
@@ -72,21 +112,28 @@
                 android:background="#f9d7db" />
 
             <Button
-                android:id="@+id/button_iniciar_sessao"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:id="@+id/data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/botao_conta"
-                android:clickable="true"
-                android:padding="16dp"
-                android:text="Iniciar sessão"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18sp" />
+                android:layout_marginTop="4dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_data_branco"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Insira a asua data de nascimento"
+                android:inputType="date"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:onClick="showDatePicker"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
 
             <Button
-                android:id="@+id/button_regista"
+                android:id="@+id/button_regista2"
                 style="@style/Base.TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,6 +142,20 @@
                 android:clickable="true"
                 android:padding="16dp"
                 android:text="Regista-te"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button_voltar"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/botao_conta"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="Voltar"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="18sp"

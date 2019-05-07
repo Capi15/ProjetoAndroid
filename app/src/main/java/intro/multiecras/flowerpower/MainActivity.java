@@ -1,8 +1,6 @@
 package intro.multiecras.flowerpower;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -10,21 +8,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
-
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    Button iniciar_sessao;
-
-    EditText utilizador, palavra_passe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +38,6 @@ public class MainActivity extends AppCompatActivity
                 .replace(R.id.relative_layout_para_o_fragment, inicioFragment, inicioFragment.getTag())
                 .commit();
 
-        utilizador = (EditText) findViewById(R.id.utilizador);
-        palavra_passe = (EditText) findViewById(R.id.palavra_passe);
-        iniciar_sessao = (Button) findViewById(R.id.button_iniciar_sessão);
     }
 
     @Override
@@ -135,18 +122,27 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void iniciaSessao(View View){
-        if(utilizador.getText().toString().equals("FlowerPower") &&
-        palavra_passe.getText().toString().equals("123")){
-            Toast.makeText(getApplicationContext(), "Iniciando sessão...", Toast.LENGTH_SHORT).show();
-            setContentView(R.layout.fragment_inicio);
-        }else{
-            Toast.makeText(getApplicationContext(), "Utilizador ou palavra-passe incorretos", Toast.LENGTH_LONG).show();
-        }
-    }
-
     public void buttonVoltar(View View){
         setContentView(R.layout.fragment_inicio);
+    }
+
+
+    public void showDatePicker(View view) {
+        RegistaFragment registaFragment = new RegistaFragment();
+        registaFragment.show(getSupportFragmentManager(),getString(R.string.date));
+    }
+
+
+    public void processDatePickerResult(int year, int month, int day) {
+        String month_string = Integer.toString(month + 1);
+        String day_string = Integer.toString(day);
+        String year_string = Integer.toString(year);
+        String dateMessage = (month_string +
+                "/" + day_string +
+                "/" + year_string);
+
+        Toast.makeText(this, getString(R.string.date) + dateMessage,
+                Toast.LENGTH_SHORT).show();
     }
 
 }

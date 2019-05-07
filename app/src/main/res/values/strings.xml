@@ -19,4 +19,5 @@
     <string name="palavra_passe">Palavra-passe</string>
     <string name="iniciar">Iniciar Sessão</string>
     <string name="registar">Regista-te</string>
+    <string name="date">datePicker</string>
 </resources>
