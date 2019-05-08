@@ -1,5 +1,7 @@
 package intro.multiecras.flowerpower;
 
+import android.graphics.drawable.Drawable;
+
 public class Categoria {
 
     // Member variables representing the title and information about the sport.
