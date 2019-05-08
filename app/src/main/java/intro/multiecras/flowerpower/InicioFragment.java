@@ -1,11 +1,18 @@
 package intro.multiecras.flowerpower;
 
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 
 /**
@@ -13,6 +20,9 @@ import android.view.ViewGroup;
  */
 public class InicioFragment extends Fragment {
 
+    private RecyclerView mRecyclerView;
+    private ArrayList<Categoria> mCategoriaData;
+    private CategoriaAdapter mAdapter;
 
     public InicioFragment() {
         // Required empty public constructor
@@ -26,4 +36,49 @@ public class InicioFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_inicio, container, false);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Initialize the RecyclerView.
+        mRecyclerView = getView().findViewById(R.id.recyclerView);
+
+        // Set the Layout Manager.
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        // Initialize the ArrayList that will contain the data.
+        mCategoriaData = new ArrayList<>();
+
+        // Initialize the adapter and set it to the RecyclerView.
+        mAdapter = new CategoriaAdapter(getContext(), mCategoriaData);
+        mRecyclerView.setAdapter(mAdapter);
+
+        // Get the data.
+        initializeData();
+    }
+
+    private void initializeData() {
+
+        // Get the resources from the XML file.
+        String[] categoriaList = getResources()
+                .getStringArray(R.array.categoria_titles);
+        String[] categoriaInfo = getResources()
+                .getStringArray(R.array.categoria_info);
+
+        // Clear the existing data (to avoid duplication).
+        mCategoriaData.clear();
+
+
+        TypedArray categoriaImageResources =
+                getResources().obtainTypedArray(R.array.categoria_images);
+        // Create the ArrayList of Sports objects with titles and
+        // information about each sport.
+        for(int i=0;i<categoriaList.length;i++){
+            mCategoriaData.add(new Categoria(categoriaList[i],categoriaInfo[i], categoriaImageResources.getResourceId(i,0)));
+        }
+
+
+        // Notify the adapter of the change.
+        mAdapter.notifyDataSetChanged();
+    }
 }
