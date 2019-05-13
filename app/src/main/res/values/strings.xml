@@ -26,6 +26,16 @@
     <string name="title_placeholder">Title</string>
     <string name="news_placeholder">News</string>
     <string name="sports_info_placeholder">Here is some news</string>
+    <string name="nome_carrinho">Nome do artigo</string>
+    <string name="individual">Individual</string>
+
+   //////////////////////////////////////////////////////
+     Strings para o fragment_carrinho
+
+    <string name="molho">Molho</string>
+    <string name="preco">Preço:</string>
+    <string name="total">Total:</string>
+    <string name="pagamento">Pagamento</string>
 
     <string-array name="categoria_titles">
         <item>Baseball</item>

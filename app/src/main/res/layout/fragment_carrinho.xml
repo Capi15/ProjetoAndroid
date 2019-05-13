@@ -3,12 +3,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CarrinhoFragment">
+    tools:context=".CarrinhoFragment"
+    android:background="@drawable/gradiente_fundo_conta">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/nome_carrinho"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="178dp"
+        android:src="@drawable/flores1"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/individual"
+        android:layout_marginTop="130dp"
+        android:layout_marginStart="170dp"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/molho"
+        android:layout_marginTop="130dp"
+        android:layout_marginStart="270dp"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preco"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="310dp"
+        android:textSize="17sp"
+        />
+
+    <TextView
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="260dp"
+        android:text="@string/nome_carrinho"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="178dp"
+        android:src="@drawable/flores1"
+        android:layout_marginTop="270dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/individual"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="170dp"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/molho"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="270dp"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preco"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="310dp"
+        android:textSize="17sp"
+        />
+
+    <TextView
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="430dp"
+        android:text="@string/nome_carrinho"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="178dp"
+        android:src="@drawable/flores1"
+        android:layout_marginTop="440dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/individual"
+        android:layout_marginTop="470dp"
+        android:layout_marginStart="170dp"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/molho"
+        android:layout_marginTop="470dp"
+        android:layout_marginStart="270dp"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preco"
+        android:layout_marginTop="510dp"
+        android:layout_marginStart="310dp"
+        android:textSize="17sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total"
+        android:layout_marginTop="630dp"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pagamento"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="250dp"
+        android:textSize="15sp"/>
+
+
 
 </FrameLayout>
