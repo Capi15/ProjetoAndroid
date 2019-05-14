@@ -20,12 +20,19 @@
     <string name="iniciar">Iniciar Sessão</string>
     <string name="registar">Regista-te</string>
     <string name="date">datePicker</string>
-
-    ////////////////////////////////////////////////
-
+    
     <string name="title_placeholder">Títlo</string>
     <string name="news_placeholder">Descrição</string>
     <string name="categoria_info_placeholder">Informação</string>
+
+    <string name="nome_carrinho">Nome do artigo</string>
+    <string name="individual">Individual</string>
+
+    <string name="molho">Molho</string>
+    <string name="preco">Preço:</string>
+    <string name="total">Total:</string>
+    <string name="pagamento">Pagamento</string>
+
 
     <string-array name="categoria_titles">
         <item>Mais Vendidas</item>
