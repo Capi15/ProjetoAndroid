@@ -1,7 +1,6 @@
 package intro.multiecras.flowerpower;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +14,8 @@ class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.ViewHolder>
 
     private ArrayList<Categoria> mCategoriaData;
     private Context mContext;
+
+
 
     CategoriaAdapter(Context context, ArrayList<Categoria> categoriaData) {
         this.mCategoriaData = categoriaData;
@@ -52,7 +53,7 @@ class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.ViewHolder>
         private TextView mTitleText;
         private TextView mInfoText;
         private ImageView mImageView;
-        
+
         ViewHolder(View itemView) {
             super(itemView);
 
