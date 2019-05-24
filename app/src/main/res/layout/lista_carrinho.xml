@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:id="@+id/cardViewId">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <TextView
+            android:layout_width="223dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nome_carrinho"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            >
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:src="@drawable/flores1"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/individual"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="130dp"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/molho"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="240dp"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/preco"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="250dp"
+            android:textSize="17sp"
+            />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

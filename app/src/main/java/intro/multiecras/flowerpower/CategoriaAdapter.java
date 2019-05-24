@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.ViewHolder> {
+public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.ViewHolder> {
 
     private ArrayList<Categoria> mCategoriaData;
     private Context mContext;
@@ -26,7 +26,7 @@ class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.ViewHolder>
     public CategoriaAdapter.ViewHolder onCreateViewHolder(
             ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(mContext).
-                inflate(R.layout.lista, parent, false));
+                inflate(R.layout.lista_inicio, parent, false));
     }
 
 
