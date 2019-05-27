@@ -1,4 +1,4 @@
-package intro.multiecras.flowerpower.Atividades;
+package intro.multiecras.flowerpower;
 
 import android.content.ContentValues;
 import android.database.Cursor;

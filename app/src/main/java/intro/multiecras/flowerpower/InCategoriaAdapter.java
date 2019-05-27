@@ -1,97 +1,77 @@
 package intro.multiecras.flowerpower;
 
-import android.os.AsyncTask;
-import android.os.Bundle;
+import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-
-
-
+import android.widget.ImageView;
+import android.widget.TextView;
 import java.util.ArrayList;
-import java.util.List;
 
-import intro.multiecras.flowerpower.Produto;
+public class InCategoriaAdapter extends RecyclerView.Adapter<InCategoriaAdapter.ViewHolder>{
 
-public class InCategoriaAdapter {
-
-   /* private RecyclerView in_categoria_list;
-    private static boolean hasFetched = false;
-    private static List<Produto> displayProdutos = new ArrayList<>();
-
-    private ProductsInicialAdapter productsInicialAdapter;
-    private ProductsInicialAdapter productsInicialAdapter2;
-
-    public InicialFragment() {
-        // Required empty public constructor
-    }
+    private ArrayList<Produto> mInCategoriaData;
+    private Context mContext;
 
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
-        setHasOptionsMenu(false);
-        return inflater.inflate(R.layout.fragment_inicial, container, false);
+    public InCategoriaAdapter(Context context, ArrayList<Produto> InCategoriaData) {
+        this.mInCategoriaData = InCategoriaData;
+        this.mContext = context;
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public InCategoriaAdapter.ViewHolder onCreateViewHolder(
+            ViewGroup parent, int viewType) {
+        return new InCategoriaAdapter.ViewHolder(LayoutInflater.from(mContext).
+                inflate(R.layout.in_categoria_slider, parent, false));
+    }
 
-        this.promocoes_list = getView().findViewById(R.id.promocoes_list);
-        this.destaques_list = getView().findViewById(R.id.destaques_list);
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+        // Get current sport.
+        Produto currentCategoria = mInCategoriaData.get(i);
 
-        System.out.println(hasFetched);
+        // Populate the textviews with data.
+        viewHolder.bindTo(currentCategoria);
+    }
 
-        if (!hasFetched) {
-            AsyncTask.execute(() -> {
-                List<Product> p1 = Product.getRandoms(7);
-                List<Product> p2 = Product.getRandoms(7);
 
-                getActivity().runOnUiThread(() -> {
-                    promocoes = p1;
-                    destaques = p2;
 
-                    setUpPromocoes(promocoes);
-                    setUpDestaques(destaques);
 
-                    hasFetched = true;
-                });
-            });
-        } else {
-            setUpPromocoes(promocoes);
-            setUpDestaques(destaques);
+    @Override
+    public int getItemCount() {
+        return mInCategoriaData.size();
+    }
+
+
+    class ViewHolder extends RecyclerView.ViewHolder {
+
+        // Member Variables for the TextViews
+        private TextView mTitleText;
+        private TextView mInfoText;
+        private ImageView mImageView;
+        private TextView mPrecoText;
+
+        ViewHolder(View itemView) {
+            super(itemView);
+
+            // Initialize the views.
+            mTitleText = itemView.findViewById(R.id.title2);
+            mInfoText = itemView.findViewById(R.id.subTitle2);
+            mImageView = itemView.findViewById(R.id.categoriaImage2);
+            mPrecoText = itemView.findViewById(R.id.preco);
         }
-    }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
+        void bindTo(Produto currentCategoria){
+            // Populate the textviews with data.
+            mTitleText.setText(currentCategoria.nome);
+            mInfoText.setText(currentCategoria.evento);
+            mImageView.setImageResource(currentCategoria.idImagem);
+            mPrecoText.setText(""+currentCategoria.preco);
 
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
 
-    private void setUpPromocoes(List<Product> products) {
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayout.HORIZONTAL, false);
-        this.promocoes_list.setLayoutManager(layoutManager);
-        this.productsInicialAdapter = new ProductsInicialAdapter(getContext(), products);
-        this.promocoes_list.setAdapter(productsInicialAdapter);
-    }
-
-    private void setUpDestaques(List<Product> products) {
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayout.HORIZONTAL, false);
-        this.destaques_list.setLayoutManager(layoutManager);
-        this.productsInicialAdapter2 = new ProductsInicialAdapter(getContext(), products);
-        this.destaques_list.setAdapter(productsInicialAdapter2);
-    }*/
-}
+        }
+    }}

@@ -1,4 +1,4 @@
-package intro.multiecras.flowerpower.Atividades;
+package intro.multiecras.flowerpower;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,15 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Toast;
-
-import intro.multiecras.flowerpower.CarrinhoFragment;
-import intro.multiecras.flowerpower.ContaFragment;
-import intro.multiecras.flowerpower.Contacte_nosFragment;
-import intro.multiecras.flowerpower.FiltrosFragment;
-import intro.multiecras.flowerpower.InCategoria;
-import intro.multiecras.flowerpower.InicioFragment;
-import intro.multiecras.flowerpower.R;
-import intro.multiecras.flowerpower.RegistaFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -156,7 +147,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void entraCategoria(View view) {
-        Intent intent = new Intent(this, InCategoria.class);
+        Intent intent = new Intent(this, EntraCategoriaActivity.class);
         startActivity(intent);
     }
 }

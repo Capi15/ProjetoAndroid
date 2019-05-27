@@ -51,6 +51,35 @@
 
     </string-array>
 
+    <array name="inCategoria_images">
+        <item>@drawable/flor_01</item>
+        <item>@drawable/flor_02</item>
+        <item>@drawable/flor_03</item>
+        <item>@drawable/flor_04</item>
+        <item>@drawable/flor_05</item>
+        <item>@drawable/flor_06</item>
+        <item>@drawable/flor_07</item>
+        <item>@drawable/flor_08</item>
+        <item>@drawable/flor_09</item>
+    </array>
+
+    <string-array name="inCategoria_nomes">
+        <item>Mais Vendidas</item>
+        <item>Dia da Mãe</item>
+        <item>Decorativas</item>
+        <item>Árvores</item>
+        <item>Mais raras</item>
+    </string-array>
+
+    <string-array name="inCategoria_descricao">
+        <item>Veja aqui as flores mais vendidas esta semana!</item>
+        <item>Escolha a sua prenda do dia da mãe!</item>
+        <item>Descubra as melhores plantas para decoração!</item>
+        <item>Plante já a sua árvore!</item>
+        <item>Obtenha as plantas mai exóticas!</item>
+
+    </string-array>
+
     <array name="categoria_images">
         <item>@drawable/mais_vendidas</item>
         <item>@drawable/dia_da_mae</item>
@@ -61,4 +90,6 @@
     </array>
     <string name="title_activity_ativity_dados_conta">AtivityDadosConta</string>
     <string name="title_activity_in_categoria">InCategoria</string>
+    <string name="eventos">Eventos</string>
+    <string name="tipo_de_plantas">Tipo de Plantas</string>
 </resources>

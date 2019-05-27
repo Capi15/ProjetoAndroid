@@ -1,27 +1,12 @@
-package intro.multiecras.flowerpower.Atividades;
+package intro.multiecras.flowerpower;
 
-import android.app.DatePickerDialog;
-import android.content.Context;
-import android.os.AsyncTask;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
-import intro.multiecras.flowerpower.R;
+import intro.multiecras.flowerpower.InfoUtilizador;
 
 public class AtivityDadosConta extends AppCompatActivity {
 

@@ -13,28 +13,29 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class InicioFragment extends Fragment {
+public class InCategoriaFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private ArrayList<Categoria> mCategoriaData;
-    private CategoriaAdapter mAdapter;
+    private ArrayList<Produto> mInCategoriaData;
+    private InCategoriaAdapter mAdapter;
 
 
-    public InicioFragment() {
+    public InCategoriaFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inicio, container, false);
+        return inflater.inflate(R.layout.fragment_in_categoria, container, false);
     }
 
     @Override
@@ -48,10 +49,10 @@ public class InicioFragment extends Fragment {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         // Initialize the ArrayList that will contain the data.
-        mCategoriaData = new ArrayList<>();
+        mInCategoriaData = new ArrayList<>();
 
         // Initialize the adapter and set it to the RecyclerView.
-        mAdapter = new CategoriaAdapter(getContext(), mCategoriaData);
+        mAdapter = new InCategoriaAdapter(getContext(), mInCategoriaData);
         mRecyclerView.setAdapter(mAdapter);
 
         // Get the data.
@@ -62,27 +63,26 @@ public class InicioFragment extends Fragment {
     private void initializeData() {
 
         // Get the resources from the XML file.
-        String[] categoriaList = getResources()
-                .getStringArray(R.array.categoria_titles);
-        String[] categoriaInfo = getResources()
-                .getStringArray(R.array.categoria_info);
+        String[] inCategoriaList = getResources()
+                .getStringArray(R.array.inCategoria_nomes);
+        String[] inCategoriaInfo = getResources()
+                .getStringArray(R.array.inCategoria_descricao);
 
         // Clear the existing data (to avoid duplication).
-        mCategoriaData.clear();
+        mInCategoriaData.clear();
 
 
-        TypedArray categoriaImageResources =
-                getResources().obtainTypedArray(R.array.categoria_images);
+        TypedArray inCategoriaImageResources =
+                getResources().obtainTypedArray(R.array.inCategoria_images);
         // Create the ArrayList of Sports objects with titles and
         // information about each sport.
-        for(int i=0;i<categoriaList.length;i++){
-            mCategoriaData.add(new Categoria(categoriaList[i],categoriaInfo[i], categoriaImageResources.getResourceId(i,0)));
-        }
-
+        List<Produto> produtos = new ArrayList<>(Arrays.asList(Container.AProduto));
+        mInCategoriaData.addAll(produtos);
 
         // Notify the adapter of the change.
         mAdapter.notifyDataSetChanged();
 
-        categoriaImageResources.recycle();
+        inCategoriaImageResources.recycle();
     }
+
 }
